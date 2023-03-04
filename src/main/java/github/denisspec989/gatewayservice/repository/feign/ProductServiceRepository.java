@@ -10,6 +10,6 @@ import java.util.List;
 
 @FeignClient(value = "product-service",url ="http://localhost:8089")
 public interface ProductServiceRepository {
-    @GetMapping("/list")
+    @GetMapping("/api/v1/prices/list")
     List<PriceDTO> getPricesOnAzs(@RequestParam("azsId") String azsId);
 }

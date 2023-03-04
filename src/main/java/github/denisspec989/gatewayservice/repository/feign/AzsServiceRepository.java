@@ -9,8 +9,8 @@ import java.util.List;
 
 @FeignClient(value = "azs-service",url ="http://localhost:8088")
 public interface AzsServiceRepository {
-    @GetMapping("/list")
+    @GetMapping("/api/v1/azses/list")
     public List<AzsDto> getFullAzsList();
-    @GetMapping("/azs")
+    @GetMapping("/api/v1/azses/azs")
     public AzsDto getAzsDetail(@RequestParam("azsId")String azsId);
 }
