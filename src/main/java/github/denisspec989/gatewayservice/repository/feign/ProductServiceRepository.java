@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value = "product-service",url ="http://localhost:8089")
+@FeignClient(value = "product-service")
 public interface ProductServiceRepository {
     @GetMapping("/api/v1/prices/list")
     List<PriceDTO> getPricesOnAzs(@RequestParam("azsId") String azsId);

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(value = "azs-service",url ="http://localhost:8088")
+@FeignClient(value = "azs-service")
 public interface AzsServiceRepository {
     @GetMapping("/api/v1/azses/list")
     public List<AzsDto> getFullAzsList();
