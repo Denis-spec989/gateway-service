@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: gateway-service
+
+
+mvc:
+  pathmatch:
+    matching-strategy: ant_path_matcher
+server:
+  port: 8091
+feign:
+  circuitbreaker:
+    enabled=true:
+springdoc:
+  swagger-ui:
+    path: /swagger-ui
